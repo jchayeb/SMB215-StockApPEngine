@@ -1,0 +1,142 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+<link href="http://www.gstatic.com/codesite/ph/17444577587916266307/css/ph_core.css" rel="stylesheet" type="text/css" />
+ <link href="http://code.google.com/css/codesite.pack.04102009.css" rel="stylesheet" type="text/css" />
+  <link  href="/css/styles.css" rel="stylesheet" type="text/css"   />
+  <script language="javascript" src='script/jquery-1.6.min.js'></script>
+  <script language="javascript" src='script/ajax.utilv6.js'></script>
+    <title>Gestion de stock</title>
+  </head>
+
+  <body>
+    <!-- content -->  
+    <header>
+     <h1 align="center">SMB215 - Gestion De Stock</h1>
+  
+ <!-- tabs --> 
+ <div id="tabs" class="gtb" align="center">
+      <a id="home" href="#home" class="tab">Home</a>	   
+	
+	  <a id="category" href="#category" class="tab">Insert Item</a> 
+	  
+	 
+  </div>
+    </header>
+
+		
+ 
+ 
+  
+ <div  id="gc-pagecontent" >
+			<img src="/images/depinfo.jpg" align="middle"  />
+		
+ 
+  <!-- home page content -->
+   <br>
+  <img src="/images/ajax-loader.gif" style="display: none;" id="imgProgress" />
+   
+ 
+    
+   <!-- ******************************************* category start******************************************* -->
+  <div class="g-unit" id="category-tab">
+    <div class ="message" id="category-show-message" style="display:none">
+  </div>
+   <!-- search container -->
+   	<div class="gsc-search-box" id="category-search-ctr">
+   	<!-- section title -->
+   	
+   	<form  name="category-search-form" id="category-search-form" align="center">
+	   	 <label>Search item</label>
+	   	 <input type="text" name="q" id="q" class="gsc-input"/> 
+	     <input type="button" value="Search" onclick="search('category')" class="gsc-search-button" />
+	     <input type="button" value="Add" onclick="add('category')" class="gsc-search-button" />
+	     <input type="reset" id="category-search-reset" class="cancel" title="Reset" value="Reset" style="visibility: hidden"/>
+    </form>
+   	</div>
+   <!-- list container -->
+   	<div align="center" class="results" style="border:1;" id="category-list-ctr">
+          <table align="center" width="60%" cellspacing="0" cellpadding="2" border="0" style="border-collapse:collapse;">
+            <thead>
+              <tr>
+                <th scope="col">Item Name</th>
+                <th scope="col">Item Description</th>
+                 <th scope="col">Item quantity</th>  
+                 <th scope="col">Price</th>  
+                <th scope="col">Action</th>  
+                                 
+              </tr>
+            </thead>
+            <tbody id="category-list-tbody"></tbody>
+          </table>
+  	</div>
+  
+  	<!-- create container -->
+	  	<div class="create-ctr" id="category-create-ctr" align="center">
+	  	<h2>Insert Item Information</h2>
+	  	<form name="category-create-form" id="category-create-form">
+	  	<table width="200" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+	  	<tbody>
+	  	<tr >
+		 <td>Item Name </td>
+          <td><span class="readonly"><input type="text" style="width: 185px;" autocomplete="off" class="gsc-input" maxlength="2048" name="name" id="name" /></span></td>
+		 </tr>
+		<tr>
+           <td>Item Description</td>
+           <td><input type="text" style="width: 185px;" autocomplete="off" class="gsc-input" maxlength="2048" name="description" id="description" /></td>
+         </tr>
+        <tr>
+        
+        <tr>
+           <td>Item Quantity</td>
+           <td><input type="text" style="width: 185px;" autocomplete="off" class="gsc-input" maxlength="2048" name="quantity" id="quantity" /></td>
+         </tr>
+         
+           <tr>
+           <td>Price</td>
+           <td><input type="text" style="width: 185px;" autocomplete="off" class="gsc-input" maxlength="2048" name="price" id="price" /></td>
+         </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td> 
+          <input type="button" class="save" title="Save" value="Save" onclick="formValidate('category')" />
+          <input type="button" class="cancel" title="Cancel" value="Cancel" onclick="cancel('category')" />
+          <input type="reset" id="category-reset" class="cancel" title="Reset" value="Reset" style="visibility: hidden"/>
+         </td>
+        </tr>
+	  	</tbody>
+  </table>
+  </form>
+  </div>
+  
+  </div>
+ <!-- ******************************************* category end******************************************* -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<script type="text/javascript">
+
+ $(window).load(function () {
+   init();
+});
+
+</script>
+
+
+ <header>
+     <h1 align="center">Jean Chayeb</h1>
+  
+
+    </header>
+
+  </body>
+</html>
